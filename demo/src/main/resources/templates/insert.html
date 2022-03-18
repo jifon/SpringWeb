@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert new post</title>
+</head>
+<body>
+<div>
+    <h1>new post form</h1>
+    <br/>
+    <form th:object="${post}" th:action="@{/save_post}" method="post">
+        <table border="1">
+        <tr>
+            <td>Post position</td>
+            <td><input type="text" th:field="*{position}" /></td>
+        </tr>
+        <tr>
+            <td>Post salary</td>
+            <td><input type="text" th:field="*{position}" /></td>
+        </tr>
+            <tr>
+                <td><button type="submit">Insert</button></td>
+            </tr>
+    </table>
+</div>
+</body>
+</html>
