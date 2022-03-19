@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
+
 @Controller
 public class PostController {
 
@@ -25,6 +26,11 @@ public class PostController {
         model.addAttribute("getAllPost", postList);
         return "index";
     }
+
+
+
+
+
 
     @RequestMapping("/new_add")
     public String viewNewPostForm(Model model) {
@@ -39,9 +45,11 @@ public class PostController {
         return "redirect:/";
     }
 
+
+
+
     @RequestMapping("/edit/{id}")
     public ModelAndView viewEditPostForm(@PathVariable(name = "id") long id){
-
         ModelAndView mav = new ModelAndView("update");
         Post post = service.updateById(id);
         mav.addObject("post", post);

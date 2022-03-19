@@ -3,10 +3,47 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Insert new post</title>
+    <style>
+        body {
+            background-color: blanchedalmond;
+            color:#2859e0;
+            font-size: 200%;
+        }
+        p {
+            color: rgb(49, 151, 116);
+        }
+        .button {
+            background-color: #d6eaf8;
+        }
+
+        .button1 {
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+            padding: 20px 30px;
+            margin: 10px 20px;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+            background-size: 200% auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+            transition: .5s;
+        }
+        .button1 {
+            background-position: right center;
+        }
+
+    </style>
 </head>
 <body>
+
 <div>
+
+
     <h1>new post form</h1>
+    <hr>
     <br/>
     <form th:object="${post}" th:action="@{/save_post}" method="post">
         <table border="1">
@@ -16,10 +53,10 @@
         </tr>
         <tr>
             <td>Post salary</td>
-            <td><input type="text" th:field="*{position}" /></td>
+            <td><input type="text" th:field="*{salary}" /></td>
         </tr>
             <tr>
-                <td><button type="submit">Insert</button></td>
+                <td><button class="button button1" type="submit">Insert</button></td>
             </tr>
     </table>
 </div>
