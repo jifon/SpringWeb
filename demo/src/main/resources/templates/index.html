@@ -20,11 +20,11 @@
         </thead>
         <tbody>
         <tr th:each="post : ${getAllPost}">
-            <td th:text="${post.position}"position</td>
-            <td th:text="${post.salary}"salary</td>
-
-            <td<a th:href="@{'/edit/' + ${post.id}}"Edit</a></td>
-            <td<a th:href="@{'/deleete/' + ${post.id}}"Delete</a></td>
+            <td th:text="${post.id}">ID</td>
+            <td th:text="${post.position}">position</td>
+            <td th:text="${post.salary}">salary</td>
+            <td><a th:href="@{'/edit/' + ${post.id}}">Edit</a></td>
+            <td><a th:href="@{'/deleete/' + ${post.id}}">Delete</a></td>
         </tr>
         </tbody>
     </table>
